@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <div class="header-left">
+          <img src="images/logo.svg" class="logo" alt="Company Logo" />
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li><a href="#" class="nav-link">Collections</a></li>
+              <li><a href="#" class="nav-link">Men</a></li>
+              <li><a href="#" class="nav-link">Women</a></li>
+              <li><a href="#" class="nav-link">About</a></li>
+              <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right">
+          <div class="cart-profile">
+            <div class="cart-wrapper" id="cart-toggle">
+              <img class="cart-icon" src="images/icon-cart.svg" alt="Cart" />
+
+              <div class="cart-dropdown hidden" id="cart-dropdown">
+                <p class="cart-header">Cart</p>
+                <hr />
+                <div class="cart-content">
+                  <p class="cart-empty" id="cart-empty">Your cart is empty.</p>
+                  <div class="cart-item hidden" id="cart-item">
+                    <div class="cart-item-details">
+                      <img
+                        class="cart-item-image"
+                        src="images/image-product-1-thumbnail.jpg"
+                        alt="Product thumbnail"
+                      />
+                      <div>
+                        <p class="cart-item-name">
+                          Fall Limited Edition Sneakers
+                        </p>
+                        <p class="cart-item-pricing">
+                          <span class="cart-item-price" id="cart-item-price"
+                            >125.00</span
+                          >
+                          x
+                          <span id="cart-item-quantity">1</span>
+                          <span class="cart-item-total" id="cart-total"></span>
+                        </p>
+                      </div>
+                      <img
+                        class="cart-item-remove"
+                        id="cart-remove"
+                        src="images/icon-delete.svg"
+                        alt="Remove item"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-checkout"
+                      id="btn-checkout"
+                    >
+                      Checkout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="profile-image"
+              src="images/image-avatar.png"
+              alt="User profile"
+            />
+          </div>
+        </div>
+      </header>
+      <hr />
+
+      <main class="product-details">
+        <section class="product-gallery">
+          <div class="product-main-image">
+            <img
+              src="images/image-product-1.jpg"
+              alt="Fall Limited Edition Sneakers"
+              id="main-product-image"
+            />
+          </div>
+          <div class="product-thumbnails">
+            <div
+              class="thumbnail active"
+              data-image="images/image-product-1.jpg"
+            >
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Thumbnail 1"
+              />
+            </div>
+            <div class="thumbnail" data-image="images/image-product-2.jpg">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Thumbnail 2"
+              />
+            </div>
+            <div class="thumbnail" data-image="images/image-product-3.jpg">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Thumbnail 3"
+              />
+            </div>
+            <div class="thumbnail" data-image="images/image-product-4.jpg">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Thumbnail 4"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="product-info">
+          <h1 class="company-name">SNEAKER COMPANY</h1>
+          <h2 class="product-name">Fall Limited Edition Sneakers</h2>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="product-pricing">
+            <div class="current-price">
+              <div class="price" id="current-price">$125.00</div>
+              <div class="discount" id="discount-percentage">50%</div>
+            </div>
+            <div class="original-price" id="original-price">$250.00</div>
+          </div>
+
+          <div class="product-actions">
+            <div class="quantity-selector">
+              <img
+                id="decrease-quantity"
+                src="images/icon-minus.svg"
+                alt="Decrease quantity"
+              />
+              <p id="quantity-display">0</p>
+              <img
+                id="increase-quantity"
+                src="images/icon-plus.svg"
+                alt="Increase quantity"
+              />
+            </div>
+            <button class="btn-add-to-cart" id="btn-add-to-cart">
+              <img src="images/icon-cart.svg" alt="Cart icon" />
+              Add to cart
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
